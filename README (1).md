@@ -1,30 +1,38 @@
 # DL-Assignment-1
-## DL_Assignment_1.ipynb:
+## DL_Assignment_1_code.ipynb:
 This document serves as a guide for the code implementing a Neural Network library with functionalities for training a neural network on image classification tasks.
 
 ## Key Components:
 
 ### NeuralNetwork Class:
-- This class encapsulates the core functionalities of a neural network.
-- It takes the number of input and output layer neurons, along with a configuration dictionary, as input during initialization.
-- The configuration dictionary specifies various hyperparameters like the number of hidden layers, the number of neurons in each hidden layer, the activation function, the loss function, the optimizer, and other training parameters.
--The class provides methods for:
-  - Forward propagation: This method calculates the activation values for each layer in the network for a given input.
-  - Backpropagation: This method calculates the gradients of the loss function with respect to the weights and biases of each layer.
-  - Various optimization algorithms: The class implements different optimization algorithms like stochastic gradient descent (SGD), momentum gradient descent, Nesterov accelerated gradient descent, and RMSprop to update the weights and biases of the network during training.
+- This class encapsulates the essential functionalities of a neural network.
+-It is initialized with the number of input and output layer neurons, along with a configuration dictionary.
+-The configuration dictionary defines various hyperparameters, including the number of hidden layers, neurons per layer, activation function, loss function,     
+  optimizer, and other training parameters.
+-The class includes methods for:
+ Forward propagation: Computes activation values for each layer in the network based on a given input.
+ Backpropagation: Determines the gradients of the loss function concerning the weights and biases of each layer.
+ Optimization algorithms: Implements various optimization techniques such as stochastic gradient descent (SGD), momentum-based gradient descent, Nesterov 
+                          accelerated gradient descent, and RMSprop to adjust the network's weights and biases during training.
 Code Structure:
 
 The code is structured as follows:
 
 1.Import Libraries:
 
-    -Necessary libraries like pandas, numpy, wandb, matplotlib, and seaborn are imported.
+    -Essential libraries such as numpy, matplotlib, seaborn, wandb, argparse, sklearn.metrics, 
+      and train_test_split are imported.
+    - These libraries are used for data preprocessing, visualization, logging, and model 
+       training.
 2. Data Loading and Preprocessing:
 
-    - The Fashion MNIST dataset is loaded using fashion_mnist.load_data.
-    - A function plot_selected_images is defined to select and visualize a few class labels from the training data. This function utilizes wandb to log the image as an artifact.
-    - The training data is flattened (converted from a 2D image matrix to a 1D vector) and normalized by dividing each pixel value by 255.
-    - The data is then split into training and validation sets (90% for training and 10% for validation).
+    - The dataset (either MNIST or Fashion MNIST) is loaded using 
+       keras.datasets.fashion_mnist.load_data or keras.datasets.mnist.load_data based on user 
+        input.
+     -The dataset is split into training (90%) and validation (10%) sets using train_test_split.
+   -The training images are flattened (converted from a 2D matrix to a 1D vector) and 
+       normalized by dividing each pixel value by 255.
+    -A function plot_sample_images() is defined to visualize selected images from the dataset.
 3. Neural Network Class Implementation:
 
   - The NeuralNetwork class is defined with the following functionalities:
