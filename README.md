@@ -1,7 +1,8 @@
 # DL-Assignment-1
 
 ## Overview
-
+# Github repo : https://github.com/Dhanushsirigineedi/DL-Assignment-1
+# Report : https://wandb.ai/dhanushsirigineedi-iitm-ac-in/DA6401_Assignment_1/reports/DA6401-Assignment-1-Report--VmlldzoxMTcwNzAxNg
 This repository contains the implementation of a **feedforward neural network** for image classification on **MNIST** and **Fashion MNIST** datasets. The network is trained using different optimization algorithms and logs results using **Weights & Biases (wandb)**.
 
 ---
