@@ -71,7 +71,7 @@ Each optimizer iterates over **epochs**, applies **mini-batch updates**, and log
 - Open a terminal and run:
 
 ```bash
-python dhanush_train.py [arguments]
+python train.py [arguments]
 ```
 
 - Replace `[arguments]` with desired values (see available arguments below).
@@ -102,7 +102,7 @@ python dhanush_train.py [arguments]
 ### **3. Example Usage**
 
 ```bash
-python dhanush_train.py -wp myproject -we myname -d fashion_mnist -e 10 -b 32 -l cross_entropy -o adam -lr 0.0001 -m 0.9 -beta 0.5 -beta1 0.9 -beta2 0.999 -eps 0.000001 -w_d 0 -w_i xavier -nhl 3 -sz 128 -a relu
+python train.py -wp myproject -we myname -d fashion_mnist -e 10 -b 32 -l cross_entropy -o adam -lr 0.0001 -m 0.9 -beta 0.5 -beta1 0.9 -beta2 0.999 -eps 0.000001 -w_d 0 -w_i xavier -nhl 3 -sz 128 -a relu
 ```
 
 This command trains a neural network on **Fashion MNIST** for **10 epochs** using the **Adam optimizer** and logs the results to **Weights & Biases**.
