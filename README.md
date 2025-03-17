@@ -118,5 +118,5 @@ This command trains a neural network on **Fashion MNIST** for **10 epochs** usin
 
 ## **Conclusion**
 
-This project provides a **flexible and customizable neural network training framework**, supporting multiple optimization methods and logging features for better experiment tracking. 🚀
+This project provides a **flexible and customizable neural network training framework**, supporting multiple optimization methods and logging features for better experiment tracking.
 
